@@ -201,7 +201,82 @@
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp"/>
                                                                                                                                                                                                                         
+<<<<<<< HEAD
+=======
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/acme-framework"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/reports/Group"/>
+                                                                                                                                                                                                                                                                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <property name="java-output-path" value="/Hello-World-22.0/target/classes"/>
+                                
+        
+>>>>>>> refs/remotes/origin/master
+        
+<<<<<<< HEAD
         
         
         
@@ -270,6 +345,9 @@
         
         <property name="java-output-path" value="/Hello-World-22.0/target/classes"/>
         <property name="context-root" value="Acme-L3-D01"/>
+=======
+        <property name="context-root" value="Hello-World-23.1.0"/>
+>>>>>>> refs/remotes/origin/master
                                                                                                                                                                                                                                                                                                                                     
     
     

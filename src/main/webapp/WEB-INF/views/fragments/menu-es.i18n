@@ -20,6 +20,9 @@ master.menu.sign-out = Salir
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.favourite-link.juaramlop2 = 45968333G: Ramírez López, Juan Carlos
+master.menu.anonymous.favourite-linkFrancisco = 7781727L: Fernández Mota, Francisco
+master.menu.anonymous.favourite-link-jaime = 29500154D:Garcia Garcia, Jaime
+master.menu.anonymous.favourite-linkAntonio = 29554475G: Peláez Moreno, Antonio
 
 # master.menu.administrator ###################################################
 
@@ -34,6 +37,7 @@ master.menu.administrator.shut-down = Parar el sistema
 
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
+master.menu.anonymous.favourite-link-jaime = 29500154D:Garcia Garcia, Jaime
 
 # master.menu.consumer ##########################################################
 

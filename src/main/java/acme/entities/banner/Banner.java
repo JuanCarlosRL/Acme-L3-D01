@@ -10,6 +10,8 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
 
+import org.hibernate.validator.constraints.URL;
+
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -36,6 +38,7 @@ public class Banner extends AbstractEntity {
 	@Column(name = "period_end", unique = false, nullable = false)
 	private LocalDateTime		periodEnd;
 
+	@URL
 	@Column(name = "picture", unique = false, nullable = true)
 	private String				picture;
 
@@ -44,6 +47,7 @@ public class Banner extends AbstractEntity {
 	@Column(name = "slogan", unique = false)
 	private String				slogan;
 
+	@URL
 	@Column(name = "web", unique = false, nullable = true)
 	private String				web;
 }

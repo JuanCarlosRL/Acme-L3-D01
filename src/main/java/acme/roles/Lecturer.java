@@ -18,12 +18,12 @@ public class Lecturer extends AbstractRole {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			resume;
+	protected String			aRésumé;
 
 	@NotBlank
 	@Length(max = 100)
 	protected String			qualifications;
 
 	@URL
-	protected String			furtherInformation;
+	protected String			link;
 }

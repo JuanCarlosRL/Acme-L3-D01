@@ -1,15 +1,16 @@
 
 package acme.entities.banner;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.validation.constraints.Future;
-import javax.validation.constraints.Max;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
@@ -27,27 +28,27 @@ public class Banner extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Past
-	@Column(name = "update_time", unique = false, nullable = false)
-	private LocalDateTime		updateTime;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				updateTime;
 
-	@Future
-	@Column(name = "period_start", unique = false, nullable = false)
-	private LocalDateTime		periodStart;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				periodStart;
 
-	@Future
-	@Column(name = "period_end", unique = false, nullable = false)
-	private LocalDateTime		periodEnd;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				periodEnd;
 
 	@URL
-	@Column(name = "picture", unique = false, nullable = true)
+	@NotNull
 	private String				picture;
 
 	@NotBlank
-	@Max(76)
-	@Column(name = "slogan", unique = false)
+	@Length(max = 75)
 	private String				slogan;
 
 	@URL
-	@Column(name = "web", unique = false, nullable = true)
+	@NotNull
 	private String				web;
 }

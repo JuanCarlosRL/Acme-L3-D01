@@ -1,5 +1,5 @@
 
-package acme.entities.banner;
+package acme.entities.session;
 
 import java.util.Date;
 
@@ -8,11 +8,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.lecture.Indication;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,35 +20,30 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Banner extends AbstractEntity {
+public class Session extends AbstractEntity {
 
-	/**
-	 * 
-	 */
 	private static final long	serialVersionUID	= 1L;
-
-	@Past
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				updateTime;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				periodStart;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				periodEnd;
-
-	@URL
-	@NotNull
-	private String				picture;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				slogan;
+	protected String			title;
+
+	@NotBlank
+	@Length(max = 100)
+	protected String			abstractString;
+
+	@NotNull
+	protected Indication		indication;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				periodStart;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				periodEnd;
 
 	@URL
-	@NotNull
-	private String				web;
+	protected String			link;
+
 }

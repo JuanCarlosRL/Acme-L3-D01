@@ -1,3 +1,4 @@
+
 package acme.roles;
 
 import javax.persistence.Entity;
@@ -13,21 +14,21 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Company extends AbstractRole {
+public class Lecturer extends AbstractRole {
 
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			name;
-
-	@NotBlank
-	@Length(max = 25)
-	protected String			VATNumber;
+	protected String			almaMater;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			summary;
+	protected String			resume;
+
+	@NotBlank
+	@Length(max = 100)
+	protected String			qualifications;
 
 	@URL
 	protected String			link;

@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -31,6 +33,7 @@ public class Note extends AbstractEntity {
 
 	@NotNull
 	@Past
+	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				instantiationMoment;
 
 	@NotBlank

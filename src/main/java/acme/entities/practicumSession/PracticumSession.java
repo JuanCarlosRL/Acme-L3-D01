@@ -11,6 +11,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
 import acme.entities.practicum.Practicum;
 import acme.framework.data.AbstractEntity;
@@ -39,6 +40,9 @@ public class PracticumSession extends AbstractEntity {
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				periodEnd;
+
+	@URL
+	protected String			link;
 
 	@ManyToOne(optional = false)
 	protected Practicum			practicum;

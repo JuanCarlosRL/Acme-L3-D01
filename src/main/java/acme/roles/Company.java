@@ -1,5 +1,5 @@
 
-package acme.entities.company;
+package acme.roles;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
@@ -7,29 +7,29 @@ import javax.validation.constraints.NotBlank;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.framework.data.AbstractEntity;
+import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Company extends AbstractEntity {
+public class Company extends AbstractRole {
 
 	private static final long	serialVersionUID	= 1L;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				name;
+	protected String			name;
 
 	@NotBlank
 	@Length(max = 25)
-	private String				VATNumber;
+	protected String			VATNumber;
 
 	@NotBlank
 	@Length(max = 100)
-	private String				summary;
+	protected String			summary;
 
 	@URL
-	private String				link;
+	protected String			link;
 }

@@ -8,7 +8,6 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractRole;
-import antlr.collections.List;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +24,7 @@ public class Assistant extends AbstractRole {
 
 	@NotBlank
 	@Length(max = 100)
-	protected List				expertiseFields;
+	protected String			expertiseFields;
 
 	@NotBlank
 	@Length(max = 100)

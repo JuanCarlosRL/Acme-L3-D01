@@ -1,9 +1,11 @@
 
 package acme.entities.peep;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
@@ -23,23 +25,24 @@ public class Peep extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Past
-	private LocalDateTime		instantiationMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				title;
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				nick;
+	protected String			nick;
 
 	@NotBlank
 	@Length(max = 100)
-	private String				message;
+	protected String			message;
 
 	@Email
-	private String				email;
+	protected String			email;
 
 	@URL
-	private String				link;
+	protected String			link;
 }

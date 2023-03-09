@@ -31,13 +31,13 @@ public class Tutorial extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			abstractString;
+	protected String			tutorialAbstract;
 
 	@NotBlank
 	@Length(max = 100)
 	protected String			goals;
 
 	@Positive
-	protected Integer			estimatedTime;
+	protected int				estimatedTime;
 
 }

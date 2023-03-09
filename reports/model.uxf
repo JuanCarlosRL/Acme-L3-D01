@@ -537,7 +537,7 @@ bg=PINK</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>426</x>
-      <y>288</y>
+      <y>294</y>
       <w>132</w>
       <h>54</h>
     </coordinates>
@@ -553,7 +553,7 @@ bg=MAGENTA</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>426</x>
-      <y>180</y>
+      <y>186</y>
       <w>132</w>
       <h>90</h>
     </coordinates>

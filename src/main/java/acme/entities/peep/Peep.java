@@ -1,13 +1,13 @@
 
-package acme.entities.banner;
+package acme.entities.peep;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
@@ -20,35 +20,29 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Banner extends AbstractEntity {
+public class Peep extends AbstractEntity {
 
-	/**
-	 * 
-	 */
 	private static final long	serialVersionUID	= 1L;
 
 	@Past
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				updateTime;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				periodStart;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				periodEnd;
-
-	@URL
-	@NotNull
-	private String				picture;
+	protected Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				slogan;
+	protected String			title;
+
+	@NotBlank
+	@Length(max = 75)
+	protected String			nick;
+
+	@NotBlank
+	@Length(max = 100)
+	protected String			message;
+
+	@Email
+	protected String			email;
 
 	@URL
-	@NotNull
-	private String				web;
+	protected String			link;
 }

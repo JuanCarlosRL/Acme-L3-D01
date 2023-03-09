@@ -8,7 +8,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -22,12 +22,9 @@ import lombok.Setter;
 @Setter
 public class Banner extends AbstractEntity {
 
-	/**
-	 * 
-	 */
 	private static final long	serialVersionUID	= 1L;
 
-	@Past
+	@PastOrPresent
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				updateTime;
@@ -41,7 +38,7 @@ public class Banner extends AbstractEntity {
 	private Date				periodEnd;
 
 	@URL
-	@NotNull
+	@NotBlank
 	private String				picture;
 
 	@NotBlank
@@ -49,6 +46,6 @@ public class Banner extends AbstractEntity {
 	private String				slogan;
 
 	@URL
-	@NotNull
+	@NotBlank
 	private String				web;
 }

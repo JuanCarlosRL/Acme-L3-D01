@@ -1,18 +1,19 @@
 
-package acme.entities.banner;
+package acme.entities.practicumSession;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.practicum.Practicum;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,32 +21,29 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Banner extends AbstractEntity {
+public class PracticumSession extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@PastOrPresent
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				updateTime;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				periodStart;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				periodEnd;
-
-	@URL
-	@NotBlank
-	private String				picture;
-
 	@NotBlank
 	@Length(max = 75)
-	private String				slogan;
+	protected String			title;
+
+	@NotBlank
+	@Length(max = 100)
+	protected String			sessionAbstract;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				periodStart;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				periodEnd;
 
 	@URL
-	@NotBlank
-	private String				web;
+	protected String			link;
+
+	@ManyToOne(optional = false)
+	protected Practicum			practicum;
 }

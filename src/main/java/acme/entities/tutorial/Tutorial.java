@@ -44,7 +44,8 @@ public class Tutorial extends AbstractEntity {
 	protected String			goals;
 
 	@Positive
-	protected int				estimatedTime;
+	protected double			estimatedTime;
+
 
 	@NotNull
 	@Valid

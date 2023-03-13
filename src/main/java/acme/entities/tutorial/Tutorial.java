@@ -44,9 +44,6 @@ public class Tutorial extends AbstractEntity {
 	protected String			goals;
 
 	@Positive
-<<<<<<< HEAD
-	protected int				estimatedTime;
-=======
 	protected double			estimatedTime;
 
 	@NotNull
@@ -58,6 +55,5 @@ public class Tutorial extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Assistant			assistant;
->>>>>>> branch 'master' of https://github.com/frafermot/Acme-L3-D02.git
 
 }
